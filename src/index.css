@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+:root {
+  --color-cream: #eef2f7;
+}
+
+body {
+  background-color: var(--color-cream);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Custom font class for the big bold headings */
+.font-display {
+  font-family: "Anton", sans-serif;
+}
+
+/* === Custom animations === */
+
+/* Fade in + slide down (for navbar) */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in + slide up (for hero text) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in + slide from right (for hero image) */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Simple fade in (for floating cards) */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Reusable animation classes */
+.animate-fade-down {
+  animation: fadeInDown 0.6s ease-out forwards;
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-right {
+  animation: fadeInRight 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Delay utilities for staggered effect */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-1000 { animation-delay: 1s; }
+
+/* Slide down from above (for sticky navbar) */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.4s ease-out;
+}
+
+/* Marquee — infinite horizontal scroll */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 3s linear infinite;
+}
+
+.font-script {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-15deg); }
+  75% { transform: rotate(15deg); }
+}
+
+.hover\:animate-wiggle:hover {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 10px 25px -5px rgba(29, 78, 216, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px -5px rgba(29, 78, 216, 0.6);
+  }
+}
+
+.animate-breathe {
+  animation: breathe 2.5s ease-in-out infinite;
+}
