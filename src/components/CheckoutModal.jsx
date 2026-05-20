@@ -4,7 +4,7 @@ import html2canvas from "html2canvas";
 import { useCart } from "../context/CartContext";
 import logo from "../assets/images/policelogo.png";
 
-const WHATSAPP_NUMBER = "233557446782";
+const WHATSAPP_NUMBER = "+233541519069";
 
 const CheckoutModal = ({ isOpen, onClose }) => {
   const { cartItems, cartTotal, clearCart } = useCart();
