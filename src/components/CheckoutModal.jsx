@@ -71,7 +71,6 @@ const CheckoutModal = ({ isOpen, onClose }) => {
       link.click();
       document.body.removeChild(link);
 
-      // Build WhatsApp message
       let messageBody = `Hello! I'd like to place an order.\n\n`;
       messageBody += `Order ID: ${orderId}\n`;
       messageBody += `Name: ${name}\n\n`;
@@ -312,7 +311,6 @@ const CheckoutModal = ({ isOpen, onClose }) => {
               })}
             </div>
 
-            {/* Total */}
             <div
               style={{
                 display: "flex",
