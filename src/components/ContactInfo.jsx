@@ -6,19 +6,19 @@ const ContactInfo = () => {
     {
       Icon: MapPin,
       title: "Main Location",
-      lines: ["29 Soi Pachauthi 33 Junction 4 Pachauthi Rd, Bangmod Thungkru,", "Bangkok 10140, Thailand"],
+      lines: ["Parkstr.18, 15328 Alt", "Tuchenbach, Germany"],
       bg: "bg-blue-50",
     },
     {
       Icon: Phone,
       title: "24*7 service",
-      lines: ["+66 (0) 2872 7199,", "police@policezebra.com"],
+      lines: ["+233541519069", "info@policezebra.de"],
       bg: "bg-blue-100/60",
     },
     {
       Icon: Clock,
       title: "Business Hours",
-      lines: ["Sat – Mon 10 am – 8 pm", "Fri Off – Day"],
+      lines: ["Mon – Fri 10 am – 8 pm", "Sat 10 am – 6 pm", "Sun Closed"],
       bg: "bg-slate-100/70",
     },
   ];
